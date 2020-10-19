@@ -12,35 +12,35 @@
 
 <script>
 export default {
-  created() {},
+  created () { },
   props: {
     title: {
       type: String,
-      default() {
+      default () {
         return '高龄认证平台'
       }
     },
     isBack: {
       type: Boolean,
-      default() {
+      default () {
         return true
       }
     },
     hasMsg: {
       type: Boolean,
-      default() {
+      default () {
         return false
       }
     }
   },
-  data() {
+  data () {
     return {}
   },
   methods: {
-    toBack() {
+    toBack () {
       this.$router.back()
     },
-    toMessage() {
+    toMessage () {
       this.$router.push('/message')
     }
   }

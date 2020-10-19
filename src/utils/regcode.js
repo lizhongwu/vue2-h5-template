@@ -25,7 +25,7 @@ class RegCode {
     this.paint = null // canvas 2d
   }
 
-  draw(dom, callback = function() {}) {
+  draw (dom, callback = function () { }) {
     // 绘图
     // 获取canvas dom
     if (!this.paint) {
@@ -54,20 +54,20 @@ class RegCode {
     this.font()
   }
 
-  getColor(arr) {
+  getColor (arr) {
     // 随机获取颜色
     let colors = new Array(3).fill('') // 创建一个长度为3的数组，值都填充为 ''
     colors = colors.map(v => this.getRand(...arr)) // 每个成员随机获取一个强度值重组为新数组
     return colors
   }
 
-  getRand(...arr) {
+  getRand (...arr) {
     // 获取某个区间的随机数
     arr.sort((a, b) => a - b) // 将传入的参数从小到大排序
     return Math.floor(Math.random() * (arr[1] - arr[0]) + arr[0])
   }
 
-  line() {
+  line () {
     // 绘制线条
     for (let i = 0; i < this.lineNum; i++) {
       // 随机获取线条的起止坐标
@@ -88,7 +88,7 @@ class RegCode {
     }
   }
 
-  arc() {
+  arc () {
     // 绘制圆点
     for (let i = 0; i < this.dotNum; i++) {
       // 随机获取圆心
@@ -109,7 +109,7 @@ class RegCode {
     }
   }
 
-  getText() {
+  getText () {
     // 随机获取验证码
     let len = this.content.length,
       str = ''
@@ -120,7 +120,7 @@ class RegCode {
     return str
   }
 
-  font() {
+  font () {
     // 绘制文字
     let str = this.getText() // 获取验证码
     this.callback(str) // 利用回调函数输出文字，用于与用户输入验证码进行比对
@@ -148,12 +148,12 @@ class RegCode {
     }
   }
 
-  clear() {
+  clear () {
     // 清空画布
     this.paint.clearRect(0, 0, this.canvas.width, this.canvas.height)
   }
 
-  drawAgain() {
+  drawAgain () {
     this.clear()
     this.draw(this.callback)
   }

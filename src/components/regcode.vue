@@ -10,95 +10,95 @@ export default {
   props: {
     width: {
       type: Number,
-      default() {
+      default () {
         return 70
       }
     },
     height: {
       type: Number,
-      default() {
+      default () {
         return 40
       }
     },
     // 线条宽度
     lineWidth: {
       type: Number,
-      default() {
+      default () {
         return 0.5
       }
     },
     // 线条数量
     lineNum: {
       type: Number,
-      default() {
+      default () {
         return 2
       }
     },
     // 点的数量
     dotNum: {
       type: Number,
-      default() {
+      default () {
         return 10
       }
     },
     // 点的半径
     dotR: {
       type: Number,
-      default() {
+      default () {
         return 1
       }
     },
     // 前景色区间
     foregroundColor: {
       type: Array,
-      default() {
+      default () {
         return [10, 80]
       }
     },
     // 背景色区间
     backgroundColor: {
       type: Array,
-      default() {
+      default () {
         return [150, 250]
       }
     },
     // 字体大小
     fontSize: {
       type: Number,
-      default() {
+      default () {
         return 20
       }
     },
     // 字体类型
     fontFamily: {
       type: String,
-      default() {
+      default () {
         return 'Georgia'
       }
     },
     // 字体绘制方法，fill/stroke
     fontStyle: {
       type: String,
-      default() {
+      default () {
         return 'fill'
       }
     },
     // 验证码因子
     content: {
       type: String,
-      default() {
+      default () {
         return 'acdefhijkmnpwxyABCDEFGHJKMNPQWXY12345789'
       }
     },
     // 验证码长度
     len: {
       type: Number,
-      default() {
+      default () {
         return 4
       }
     }
   },
-  mounted() {
+  mounted () {
     let reg = new RegCode({
       lineWidth: this.lineWidth, // 线条宽度
       lineNum: this.lineNum, // 线条数量
